@@ -1,0 +1,105 @@
+.thumbnail,
+.col {
+  box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0.8em;
+  border: 1px solid #eee;
+  &:hover {
+    box-shadow: 0 12px 3em -1em rgba(0, 0, 0, 0.5);
+    .imgContainer {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  a {
+    display: block;
+    @include aSetting(#555);
+    position: relative;
+    &:focus-visible {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        box-shadow: 0px 0px 0px 1px $aHover inset;
+      }
+    }
+  }
+  .imgContainer {
+    @include aspectRatio(4, 3, cover);
+    margin-bottom: 0.5em;
+    img {
+      transition: 1s all;
+    }
+  }
+  h2,
+  h3,
+  h4,
+  .title {
+    margin: 0.2em 0;
+    font-weight: bold;
+  }
+  .caption {
+    width: 98%;
+    margin: 0 auto;
+    // padding-bottom: 1em;
+  }
+  .btnGrp {
+    padding: 0.2em 0;
+  }
+  hr {
+    width: 90%;
+    margin: 0.1em auto 1em;
+  }
+}
+.lp .col {
+  padding-bottom: 60px;
+  &:hover {
+    border: 1px solid $colorPrimary;
+  }
+  .caption {
+    .title {
+      color: $colorPrimary;
+      font-size: 1.125rem;
+    }
+    time {
+      color: #888;
+      font-size: 0.938em;
+    }
+    p {
+      color: #333;
+      border-top: 1px solid $colorPrimary;
+      margin-top: 4px;
+      padding-top: 8px;
+      font-size: 0.9375rem;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 4;
+      // -webkit-box-orient: vertical;
+      // height: 7em;
+    }
+  }
+  .btn {
+    color: #333;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    &:hover {
+      background: $colorPrimary;
+      border: 1px solid $colorPrimary;
+      color: #fff;
+    }
+  }
+}

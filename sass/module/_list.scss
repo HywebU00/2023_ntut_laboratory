@@ -1,0 +1,105 @@
+.lp {
+  table {
+    td {
+      a {
+        @include aSetting($colorWord);
+      }
+      &.date {
+        text-align: center;
+        color: #666;
+        @include screen("mobile") {
+          text-align: left;
+        }
+      }
+      &.num {
+        text-align: center;
+        color: #666;
+        @include screen("mobile") {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .list {
+    & > ul,
+    ol {
+      list-style-type: none;
+      padding: 0;
+      border-top: 2px solid $colorPrimary;
+      & > li {
+        padding: 0.75em 0 0.5em;
+        border-bottom: 1px solid #ddd;
+        position: relative; // outline: 1px solid blue;
+        overflow: hidden;
+        .tag {
+          margin-left: 2em;
+        }
+        & > a {
+          display: block;
+          padding-left: 2em;
+          position: relative;
+          line-height: 1.45em;
+          font-weight: bold;
+          color: $colorWord;
+          &:hover {
+            color: $aHover;
+          }
+          .num {
+            width: 1.5em;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &:after {
+              content: ".";
+              display: inline-block;
+            }
+          }
+        }
+        // span.dept {
+        //   display: inline-block;
+        //   font-size: 0.938em;
+        //   font-weight: normal;
+        //   @include screen("mobile") {
+        //     display: block;
+        //   }
+        // }
+        time {
+          display: block;
+          color: #888;
+          font-size: 0.938em;
+          font-weight: normal;
+        }
+        .pic {
+          width: 280px;
+          margin: 0 1em 0 0;
+          float: left;
+          @include screen("mobile") {
+            width: 100%;
+            float: none;
+          }
+        }
+        .text {
+          .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            color: $colorPrimary;
+          }
+
+          p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            color: #333;
+            font-size: 0.9375rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -27,34 +27,50 @@
       padding: 0;
       border-top: 2px solid $colorPrimary;
       & > li {
-        padding: 0.75em 0 0.5em;
+        padding: 0.75em 0;
         border-bottom: 1px solid #ddd;
         position: relative; // outline: 1px solid blue;
         overflow: hidden;
-        .tag {
-          margin-left: 2em;
-        }
-        & > a {
+        &::before {
+          content: "";
+          width: 6px;
+          height: 6px;
           display: block;
-          padding-left: 2em;
+          position: absolute;
+          border-top: 2px solid $colorPrimary;
+          border-right: 2px solid $colorPrimary;
+          transform: rotate(45deg);
+          top: 20px;
+          left: 4px;
+        }
+        // .tag {
+        //   margin-left: 2em;
+        // }
+        & > a {
+          display: flex;
+          justify-content: space-between;
+          padding-left: 1.5em;
           position: relative;
           line-height: 1.45em;
           font-weight: bold;
           color: $colorWord;
+          @include screen("mobile") {
+            display: block;
+          }
           &:hover {
             color: $aHover;
           }
-          .num {
-            width: 1.5em;
-            text-align: right;
-            position: absolute;
-            top: 0;
-            left: 0;
-            &:after {
-              content: ".";
-              display: inline-block;
-            }
-          }
+          // .num {
+          //   width: 1.5em;
+          //   text-align: right;
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   &:after {
+          //     content: ".";
+          //     display: inline-block;
+          //   }
+          // }
         }
         // span.dept {
         //   display: inline-block;
@@ -64,6 +80,41 @@
         //     display: block;
         //   }
         // }
+        time {
+          display: block;
+          color: #888;
+          font-size: 0.938em;
+          font-weight: normal;
+          flex: 0 0 auto;
+          margin-left: 1em;
+          @include screen("mobile") {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .list_pic {
+    & > ul,
+    ol {
+      list-style-type: none;
+      padding: 0;
+      border-top: 2px solid $colorPrimary;
+      & > li {
+        padding: 0.75em 0 0.5em;
+        border-bottom: 1px solid #ddd;
+        position: relative; // outline: 1px solid blue;
+        overflow: hidden;
+        & > a {
+          display: block;
+          position: relative;
+          line-height: 1.45em;
+          font-weight: bold;
+          color: $colorWord;
+          &:hover {
+            color: $aHover;
+          }
+        }
         time {
           display: block;
           color: #888;

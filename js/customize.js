@@ -67,7 +67,8 @@ window.addEventListener('load', () => {
   });
   const mpSlider = new Swiper('.mainSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
+    autoplay:true,
     // 切換點
     pagination: {
       el: '.mainSlider .swiperDots',

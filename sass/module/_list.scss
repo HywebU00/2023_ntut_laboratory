@@ -28,7 +28,7 @@
       border-top: 2px solid $colorPrimary;
       & > li {
         padding: 0.75em 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px dashed #ddd;
         position: relative; // outline: 1px solid blue;
         overflow: hidden;
         &::before {
@@ -102,7 +102,7 @@
       border-top: 2px solid $colorPrimary;
       & > li {
         padding: 0.75em 0 0.5em;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px dashed #ddd;
         position: relative; // outline: 1px solid blue;
         overflow: hidden;
         & > a {

@@ -4408,7 +4408,7 @@ img {
   .header .navigation .navList li::after {
     content: "/";
     display: inline-block;
-    color: #fff;
+    color: #37e6d1;
   }
   .header .navigation .navList li:last-child::after {
     display: none;
@@ -4417,7 +4417,7 @@ img {
     display: inline-block;
     padding: 0.5em;
     text-decoration: none;
-    color: #fff;
+    color: #37e6d1;
   }
   .header .navigation .navList li a:hover {
     text-decoration: underline;
@@ -6491,7 +6491,7 @@ img {
   .lp .list > ul > li,
   .lp .list ol > li {
     padding: 0.75em 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px dashed #ddd;
     position: relative;
     overflow: hidden;
   }
@@ -6559,7 +6559,7 @@ img {
   .lp .list_pic > ul > li,
   .lp .list_pic ol > li {
     padding: 0.75em 0 0.5em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px dashed #ddd;
     position: relative;
     overflow: hidden;
   }

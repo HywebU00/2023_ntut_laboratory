@@ -223,7 +223,7 @@
         &::after {
           content: "/";
           display: inline-block;
-          color: #fff;
+          color: #37e6d1;
         }
         &:last-child::after {
           display: none;
@@ -232,7 +232,7 @@
           display: inline-block;
           padding: 0.5em;
           text-decoration: none;
-          color: #fff;
+          color: #37e6d1;
           &:hover {
             text-decoration: underline;
           }

@@ -2089,6 +2089,15 @@ img {
       font-size: 1.2em;
     }
   }
+  .cp h1,
+  .cp h2,
+  .cp h3,
+  .cp h4,
+  .cp h5,
+  .cp h6,
+  .cp p {
+    word-wrap: break-word;
+  }
   .cp h1 {
     font-size: 2em;
   }
@@ -4483,9 +4492,9 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .mainMenu > ul > li {
     -webkit-box-flex: 0;
@@ -8376,6 +8385,7 @@ img {
     margin: 0.5em 0;
     position: relative;
     padding-left: 0.5em;
+    word-wrap: break-word;
   }
   h1.title:before,
   h2.title:before {

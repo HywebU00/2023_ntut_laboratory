@@ -7,6 +7,7 @@ h2.title {
   margin: 0.5em 0;
   position: relative;
   padding-left: 0.5em;
+  word-wrap: break-word;
   &:before {
     content: "";
     width: 4px;

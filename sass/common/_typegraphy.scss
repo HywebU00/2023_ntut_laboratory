@@ -3,8 +3,18 @@
 .cp {
   font-size: 1em * 1.0666666;
   line-height: 1.65em;
-  @include screen('xsMobile') {
+  @include screen("xsMobile") {
     font-size: 1em * 1.2;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    // word-break: keep-all;
+    word-wrap: break-word;
   }
   h1 {
     font-size: 2em;
@@ -61,7 +71,7 @@
   }
   img {
     max-width: 100%;
-    @include screen('mobile') {
+    @include screen("mobile") {
       max-width: 100%;
       width: auto;
       clear: both;

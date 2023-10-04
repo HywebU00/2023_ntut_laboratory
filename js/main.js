@@ -1458,7 +1458,7 @@ function categoryActive() {
     const item = i.querySelectorAll('a');
     item.forEach((tag) => {
       tag.addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         removeClass(item);
         e.target.classList.add('active');
       });

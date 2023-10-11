@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   &.noscroll {
     position: static;
@@ -15,12 +17,14 @@ body {
     padding: 0;
   }
 }
+
 .row {
   @include makeRow();
   & > div {
     box-sizing: border-box;
   }
 }
+
 // 最外圍預設為100%
 .wrapper {
   width: 100%;
@@ -31,6 +35,7 @@ body {
     overflow-y: auto;
   }
 }
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
   margin: 0 auto;
@@ -38,17 +43,30 @@ body {
   position: relative;
   @include containerFixed;
 }
+
 .main {
   position: relative;
-  margin: 0 auto 5em;
+  margin: 0 auto 2em;
+  min-height: calc(100vh - 180px - 300px - 118px);
+  @include screen("notebook") {
+    min-height: calc(100vh - 180px - 250px - 118px);
+  }
+  @media screen and (max-width: 1200px) {
+    min-height: calc(100vh - 180px - 200px - 118px);
+  }
+  @include screen("tablet") {
+    min-height: calc(100vh - 180px - 118px);
+  }
   @include screen("mobile") {
     padding-top: 60px;
+    min-height: calc(100vh - 60px - 150px);
   }
   // 可先設定一個中央區塊最大寬，限制accessKey對齊
   h2 {
     line-height: 1.25em;
   }
 }
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
@@ -93,6 +111,7 @@ body {
   //   }
   // }
 }
+
 .hidden {
   display: none;
 }

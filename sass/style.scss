@@ -1,11 +1,9 @@
 @charset "utf-8";
 @import "_variable"; //變數
 @import "common/_mixin"; //客製MIXIN
-
 // 套件預設css必須放在layer外面
 @import "../vendor/swiper/swiper-bundle.min.css"; //swiper初始套件
 @import "../vendor/fancybox/fancybox.css"; //fancybox初始套件
-
 // 目前設定這layer中的權重最低
 @layer webScss {
   // 共通 common
@@ -49,6 +47,7 @@
   @import "page/_template"; //版型初始設定
   @import "module/_menusidebar"; //menuSidebar
 }
+
 @layer secScss {
   @import "element/_image"; //圖片
   @import "common/_hack"; //瀏覽器修正
@@ -57,5 +56,6 @@
   @import "page/_mp"; //首頁
   @import "page/_cp"; //CP
 }
+
 @import "page/_color";
 @import "common/_print"; //列印樣式

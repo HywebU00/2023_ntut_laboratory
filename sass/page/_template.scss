@@ -47,15 +47,16 @@ body {
 .main {
   position: relative;
   margin: 0 auto 2em;
-  min-height: calc(100vh - 180px - 300px - 118px);
+  min-height: calc(100vh - 180px - 118px);
+  // min-height: calc(100vh - 180px - 300px - 118px);
   @include screen("notebook") {
-    min-height: calc(100vh - 180px - 250px - 118px);
+    // min-height: calc(100vh - 180px - 250px - 118px);
   }
   @media screen and (max-width: 1200px) {
-    min-height: calc(100vh - 180px - 200px - 118px);
+    // min-height: calc(100vh - 180px - 200px - 118px);
   }
   @include screen("tablet") {
-    min-height: calc(100vh - 180px - 118px);
+    // min-height: calc(100vh - 180px - 118px);
   }
   @include screen("mobile") {
     padding-top: 60px;

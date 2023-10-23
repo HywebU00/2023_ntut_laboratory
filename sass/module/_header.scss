@@ -150,13 +150,13 @@
     box-sizing: border-box;
     margin-bottom: 26px;
     @include screen("mobile") {
-      padding: 2px 60px;
+      padding: 2px 15px 2px 60px;
       width: 100%;
-      text-align: center;
+      text-align: left;
       height: 60px;
       margin-bottom: 0;
       display: flex;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
     }
     a {
@@ -176,23 +176,32 @@
     .title {
       display: flex;
       flex-direction: column;
+      margin-top: 3px;
       .titleMain {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         padding-bottom: 8px;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         border-bottom: 1px solid rgb(255, 255, 255, 0.5);
         @include screen("mobile") {
           font-size: 1.25rem;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border-bottom: 0px;
         }
-        @include screen("mobile") {
-          display: none;
-        }
+
         .en {
+          @include screen("mobile") {
+            display: none;
+          }
         }
       }
       .titleSub {
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 1px;
+        font-weight: 500;
+        @include screen("mobile") {
+          display: none;
+        }
       }
     }
   }

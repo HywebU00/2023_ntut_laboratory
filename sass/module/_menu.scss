@@ -51,6 +51,7 @@
     flex-wrap: wrap;
     // 第一層選單樣式
     justify-content: flex-start;
+    // justify-content: space-between;
     & > li {
       // flex: 0 1 calc(100% / 6);
       flex: 0 1 auto;
@@ -105,6 +106,8 @@
   ul {
     li {
       position: relative;
+      line-height: 130%;
+      word-wrap: break-word;
       a {
         display: block;
         outline: none;
@@ -113,7 +116,8 @@
       ul {
         display: none;
         overflow: visible;
-        width: 100%;
+        // width: 100%;
+        width: 200px;
         background: rgba(0, 41, 55, 0.85);
         padding: 0;
         z-index: 999999;
@@ -128,7 +132,7 @@
         // 第二層選單樣式
         li {
           a {
-            padding: 0.6em 1.2em;
+            padding: 0.8em 1.2em;
             color: #fff;
             font-weight: bold;
             &:hover,

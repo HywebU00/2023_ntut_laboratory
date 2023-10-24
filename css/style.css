@@ -4355,6 +4355,11 @@ img {
             flex-direction: column;
     margin-top: 3px;
   }
+  @media screen and (max-width: 767px) {
+    .header h1 .title {
+      width: 100%;
+    }
+  }
   .header h1 .title .titleMain {
     font-size: 1.8rem;
     padding-bottom: 8px;
@@ -4368,11 +4373,17 @@ img {
       padding-bottom: 0;
       margin-bottom: 0;
       border-bottom: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
   @media screen and (max-width: 767px) {
     .header h1 .title .titleMain .en {
-      display: none;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
     }
   }
   .header h1 .title .titleSub {

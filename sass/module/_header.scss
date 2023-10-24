@@ -177,6 +177,9 @@
       display: flex;
       flex-direction: column;
       margin-top: 3px;
+      @include screen("mobile") {
+        width: 100%;
+      }
       .titleMain {
         font-size: 1.8rem;
         padding-bottom: 8px;
@@ -188,11 +191,17 @@
           padding-bottom: 0;
           margin-bottom: 0;
           border-bottom: 0px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
 
         .en {
           @include screen("mobile") {
-            display: none;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
           }
         }
       }

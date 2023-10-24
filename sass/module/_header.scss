@@ -163,6 +163,9 @@
       display: inline-block;
       color: #fff;
       text-shadow: 0 0 3px rgba(0, 41, 55, 0.3);
+      @include screen("mobile") {
+        width: 100%;
+      }
     }
     img {
       display: block;

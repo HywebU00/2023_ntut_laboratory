@@ -4334,6 +4334,11 @@ img {
     color: #fff;
     text-shadow: 0 0 3px rgba(0, 41, 55, 0.3);
   }
+  @media screen and (max-width: 767px) {
+    .header h1 a {
+      width: 100%;
+    }
+  }
   .header h1 img {
     display: block;
     max-height: 60px;
